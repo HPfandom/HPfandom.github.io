@@ -1,0 +1,23 @@
+<!-- Цель (structurePage) - элемент, содержимое которого нужно скопировать -->  
+<pre id="structurePage">
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Пример HTML5 страницы</title>
+  </head>
+  <body>
+    Содержимое страницы...
+  </body>
+  </html>
+</pre>
+<!-- Триггер - элемент, при нажатии на который будет скопирована цель -->
+<!-- В триггере цель устанавливается с помощью значения атрибута data-clipboard-target -->
+<button type="button" data-clipboard-target="#structurePage">Скопировать код</button>
+ 
+<!-- Подключаем скрипт clipboard.min.js -->
+<script src="clipboard.min.js"></script>
+<script>
+// Инициализируем элемент button для всех элементов button, расположенных после pre
+new Clipboard('pre+button');
+</script>  
